@@ -1,0 +1,10 @@
+Aerts
+Name	Risk Level	Number of Instances
+X-Frame-Options Header Not Set	Medium	2
+Absence of Anti-CSRF Tokens	Low	2
+Cross-Domain JavaScript Source File Inclusion	Low	4
+X-Content-Type-Options Header Missing	Low	8
+Information Disclosure - Suspicious Comments	Informational	1
+
+
+
