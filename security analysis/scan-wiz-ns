@@ -1,0 +1,626 @@
+sauera@sauera-a02 Microservices-demo-app % kubeaudit all -n wiz
+
+DEPRECATION NOTICE: The 'mountds' command is deprecated and will stop working in a future minor release. Please use the 'mounts' command instead. If you use 'all' no change is required.
+
+
+---------------- Results for ---------------
+
+  apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    name: cart
+    namespace: wiz
+
+--------------------------------------------
+
+-- [error] AppArmorAnnotationMissing
+   Message: AppArmor annotation missing. The annotation 'container.apparmor.security.beta.kubernetes.io/cart' should be added.
+   Metadata:
+      Container: cart
+      MissingAnnotation: container.apparmor.security.beta.kubernetes.io/cart
+
+-- [error] AutomountServiceAccountTokenTrueAndDefaultSA
+   Message: Default service account with token mounted. automountServiceAccountToken should be set to 'false' on either the ServiceAccount or on the PodSpec or a non-default service account should be used.
+
+-- [error] CapabilityOrSecurityContextMissing
+   Message: Security Context not set. The Security Context should be specified and all Capabilities should be dropped by setting the Drop list to ALL.
+   Metadata:
+      Container: cart
+
+-- [error] RunAsNonRootPSCNilCSCNil
+   Message: runAsNonRoot should be set to true or runAsUser should be set to a value > 0 either in the container SecurityContext or PodSecurityContext.
+   Metadata:
+      Container: cart
+
+-- [error] AllowPrivilegeEscalationNil
+   Message: allowPrivilegeEscalation not set which allows privilege escalation. It should be set to 'false'.
+   Metadata:
+      Container: cart
+
+-- [warning] PrivilegedNil
+   Message: privileged is not set in container SecurityContext. Privileged defaults to 'false' but it should be explicitly set to 'false'.
+   Metadata:
+      Container: cart
+
+-- [error] ReadOnlyRootFilesystemNil
+   Message: readOnlyRootFilesystem is not set in container SecurityContext. It should be set to 'true'.
+   Metadata:
+      Container: cart
+
+-- [error] SeccompAnnotationMissing
+   Message: Seccomp annotation is missing. The annotation seccomp.security.alpha.kubernetes.io/pod: runtime/default should be added.
+   Metadata:
+      MissingAnnotation: seccomp.security.alpha.kubernetes.io/pod
+
+
+---------------- Results for ---------------
+
+  apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    name: catalogue
+    namespace: wiz
+
+--------------------------------------------
+
+-- [error] AppArmorAnnotationMissing
+   Message: AppArmor annotation missing. The annotation 'container.apparmor.security.beta.kubernetes.io/catalogue' should be added.
+   Metadata:
+      MissingAnnotation: container.apparmor.security.beta.kubernetes.io/catalogue
+      Container: catalogue
+
+-- [error] AutomountServiceAccountTokenTrueAndDefaultSA
+   Message: Default service account with token mounted. automountServiceAccountToken should be set to 'false' on either the ServiceAccount or on the PodSpec or a non-default service account should be used.
+
+-- [error] CapabilityOrSecurityContextMissing
+   Message: Security Context not set. The Security Context should be specified and all Capabilities should be dropped by setting the Drop list to ALL.
+   Metadata:
+      Container: catalogue
+
+-- [error] RunAsNonRootPSCNilCSCNil
+   Message: runAsNonRoot should be set to true or runAsUser should be set to a value > 0 either in the container SecurityContext or PodSecurityContext.
+   Metadata:
+      Container: catalogue
+
+-- [error] AllowPrivilegeEscalationNil
+   Message: allowPrivilegeEscalation not set which allows privilege escalation. It should be set to 'false'.
+   Metadata:
+      Container: catalogue
+
+-- [warning] PrivilegedNil
+   Message: privileged is not set in container SecurityContext. Privileged defaults to 'false' but it should be explicitly set to 'false'.
+   Metadata:
+      Container: catalogue
+
+-- [error] ReadOnlyRootFilesystemNil
+   Message: readOnlyRootFilesystem is not set in container SecurityContext. It should be set to 'true'.
+   Metadata:
+      Container: catalogue
+
+-- [error] SeccompAnnotationMissing
+   Message: Seccomp annotation is missing. The annotation seccomp.security.alpha.kubernetes.io/pod: runtime/default should be added.
+   Metadata:
+      MissingAnnotation: seccomp.security.alpha.kubernetes.io/pod
+
+
+---------------- Results for ---------------
+
+  apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    name: dispatch
+    namespace: wiz
+
+--------------------------------------------
+
+-- [error] AppArmorAnnotationMissing
+   Message: AppArmor annotation missing. The annotation 'container.apparmor.security.beta.kubernetes.io/dispatch' should be added.
+   Metadata:
+      Container: dispatch
+      MissingAnnotation: container.apparmor.security.beta.kubernetes.io/dispatch
+
+-- [error] AutomountServiceAccountTokenTrueAndDefaultSA
+   Message: Default service account with token mounted. automountServiceAccountToken should be set to 'false' on either the ServiceAccount or on the PodSpec or a non-default service account should be used.
+
+-- [error] CapabilityOrSecurityContextMissing
+   Message: Security Context not set. The Security Context should be specified and all Capabilities should be dropped by setting the Drop list to ALL.
+   Metadata:
+      Container: dispatch
+
+-- [error] RunAsNonRootPSCNilCSCNil
+   Message: runAsNonRoot should be set to true or runAsUser should be set to a value > 0 either in the container SecurityContext or PodSecurityContext.
+   Metadata:
+      Container: dispatch
+
+-- [error] AllowPrivilegeEscalationNil
+   Message: allowPrivilegeEscalation not set which allows privilege escalation. It should be set to 'false'.
+   Metadata:
+      Container: dispatch
+
+-- [warning] PrivilegedNil
+   Message: privileged is not set in container SecurityContext. Privileged defaults to 'false' but it should be explicitly set to 'false'.
+   Metadata:
+      Container: dispatch
+
+-- [error] ReadOnlyRootFilesystemNil
+   Message: readOnlyRootFilesystem is not set in container SecurityContext. It should be set to 'true'.
+   Metadata:
+      Container: dispatch
+
+-- [error] SeccompAnnotationMissing
+   Message: Seccomp annotation is missing. The annotation seccomp.security.alpha.kubernetes.io/pod: runtime/default should be added.
+   Metadata:
+      MissingAnnotation: seccomp.security.alpha.kubernetes.io/pod
+
+
+---------------- Results for ---------------
+
+  apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    name: mongodb
+    namespace: wiz
+
+--------------------------------------------
+
+-- [error] AppArmorAnnotationMissing
+   Message: AppArmor annotation missing. The annotation 'container.apparmor.security.beta.kubernetes.io/mongodb' should be added.
+   Metadata:
+      Container: mongodb
+      MissingAnnotation: container.apparmor.security.beta.kubernetes.io/mongodb
+
+-- [error] AutomountServiceAccountTokenTrueAndDefaultSA
+   Message: Default service account with token mounted. automountServiceAccountToken should be set to 'false' on either the ServiceAccount or on the PodSpec or a non-default service account should be used.
+
+-- [error] CapabilityOrSecurityContextMissing
+   Message: Security Context not set. The Security Context should be specified and all Capabilities should be dropped by setting the Drop list to ALL.
+   Metadata:
+      Container: mongodb
+
+-- [error] RunAsNonRootPSCNilCSCNil
+   Message: runAsNonRoot should be set to true or runAsUser should be set to a value > 0 either in the container SecurityContext or PodSecurityContext.
+   Metadata:
+      Container: mongodb
+
+-- [error] AllowPrivilegeEscalationNil
+   Message: allowPrivilegeEscalation not set which allows privilege escalation. It should be set to 'false'.
+   Metadata:
+      Container: mongodb
+
+-- [warning] PrivilegedNil
+   Message: privileged is not set in container SecurityContext. Privileged defaults to 'false' but it should be explicitly set to 'false'.
+   Metadata:
+      Container: mongodb
+
+-- [error] ReadOnlyRootFilesystemNil
+   Message: readOnlyRootFilesystem is not set in container SecurityContext. It should be set to 'true'.
+   Metadata:
+      Container: mongodb
+
+-- [error] SeccompAnnotationMissing
+   Message: Seccomp annotation is missing. The annotation seccomp.security.alpha.kubernetes.io/pod: runtime/default should be added.
+   Metadata:
+      MissingAnnotation: seccomp.security.alpha.kubernetes.io/pod
+
+
+---------------- Results for ---------------
+
+  apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    name: mysql
+    namespace: wiz
+
+--------------------------------------------
+
+-- [error] AppArmorAnnotationMissing
+   Message: AppArmor annotation missing. The annotation 'container.apparmor.security.beta.kubernetes.io/mysql' should be added.
+   Metadata:
+      Container: mysql
+      MissingAnnotation: container.apparmor.security.beta.kubernetes.io/mysql
+
+-- [error] AutomountServiceAccountTokenTrueAndDefaultSA
+   Message: Default service account with token mounted. automountServiceAccountToken should be set to 'false' on either the ServiceAccount or on the PodSpec or a non-default service account should be used.
+
+-- [error] CapabilityShouldDropAll
+   Message: Capability Drop list should be set to ALL. Add the specific ones you need to the Add list and set an override label.
+   Metadata:
+      Container: mysql
+
+-- [error] CapabilityAdded
+   Message: Capability "NET_ADMIN" added. It should be removed from the capability add list. If you need this capability, add an override label such as 'container.audit.kubernetes.io/mysql.allow-capability-net-admin: SomeReason'.
+   Metadata:
+      Container: mysql
+      Metadata: NET_ADMIN
+
+-- [error] RunAsNonRootPSCNilCSCNil
+   Message: runAsNonRoot should be set to true or runAsUser should be set to a value > 0 either in the container SecurityContext or PodSecurityContext.
+   Metadata:
+      Container: mysql
+
+-- [error] AllowPrivilegeEscalationNil
+   Message: allowPrivilegeEscalation not set which allows privilege escalation. It should be set to 'false'.
+   Metadata:
+      Container: mysql
+
+-- [warning] PrivilegedNil
+   Message: privileged is not set in container SecurityContext. Privileged defaults to 'false' but it should be explicitly set to 'false'.
+   Metadata:
+      Container: mysql
+
+-- [error] ReadOnlyRootFilesystemNil
+   Message: readOnlyRootFilesystem is not set in container SecurityContext. It should be set to 'true'.
+   Metadata:
+      Container: mysql
+
+-- [error] SeccompAnnotationMissing
+   Message: Seccomp annotation is missing. The annotation seccomp.security.alpha.kubernetes.io/pod: runtime/default should be added.
+   Metadata:
+      MissingAnnotation: seccomp.security.alpha.kubernetes.io/pod
+
+
+---------------- Results for ---------------
+
+  apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    name: payment
+    namespace: wiz
+
+--------------------------------------------
+
+-- [error] AppArmorAnnotationMissing
+   Message: AppArmor annotation missing. The annotation 'container.apparmor.security.beta.kubernetes.io/payment' should be added.
+   Metadata:
+      Container: payment
+      MissingAnnotation: container.apparmor.security.beta.kubernetes.io/payment
+
+-- [error] AutomountServiceAccountTokenTrueAndDefaultSA
+   Message: Default service account with token mounted. automountServiceAccountToken should be set to 'false' on either the ServiceAccount or on the PodSpec or a non-default service account should be used.
+
+-- [error] CapabilityOrSecurityContextMissing
+   Message: Security Context not set. The Security Context should be specified and all Capabilities should be dropped by setting the Drop list to ALL.
+   Metadata:
+      Container: payment
+
+-- [error] RunAsNonRootPSCNilCSCNil
+   Message: runAsNonRoot should be set to true or runAsUser should be set to a value > 0 either in the container SecurityContext or PodSecurityContext.
+   Metadata:
+      Container: payment
+
+-- [error] AllowPrivilegeEscalationNil
+   Message: allowPrivilegeEscalation not set which allows privilege escalation. It should be set to 'false'.
+   Metadata:
+      Container: payment
+
+-- [warning] PrivilegedNil
+   Message: privileged is not set in container SecurityContext. Privileged defaults to 'false' but it should be explicitly set to 'false'.
+   Metadata:
+      Container: payment
+
+-- [error] ReadOnlyRootFilesystemNil
+   Message: readOnlyRootFilesystem is not set in container SecurityContext. It should be set to 'true'.
+   Metadata:
+      Container: payment
+
+-- [error] SeccompAnnotationMissing
+   Message: Seccomp annotation is missing. The annotation seccomp.security.alpha.kubernetes.io/pod: runtime/default should be added.
+   Metadata:
+      MissingAnnotation: seccomp.security.alpha.kubernetes.io/pod
+
+
+---------------- Results for ---------------
+
+  apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    name: rabbitmq
+    namespace: wiz
+
+--------------------------------------------
+
+-- [error] AppArmorAnnotationMissing
+   Message: AppArmor annotation missing. The annotation 'container.apparmor.security.beta.kubernetes.io/rabbitmq' should be added.
+   Metadata:
+      Container: rabbitmq
+      MissingAnnotation: container.apparmor.security.beta.kubernetes.io/rabbitmq
+
+-- [error] AutomountServiceAccountTokenTrueAndDefaultSA
+   Message: Default service account with token mounted. automountServiceAccountToken should be set to 'false' on either the ServiceAccount or on the PodSpec or a non-default service account should be used.
+
+-- [error] CapabilityOrSecurityContextMissing
+   Message: Security Context not set. The Security Context should be specified and all Capabilities should be dropped by setting the Drop list to ALL.
+   Metadata:
+      Container: rabbitmq
+
+-- [error] RunAsNonRootPSCNilCSCNil
+   Message: runAsNonRoot should be set to true or runAsUser should be set to a value > 0 either in the container SecurityContext or PodSecurityContext.
+   Metadata:
+      Container: rabbitmq
+
+-- [error] AllowPrivilegeEscalationNil
+   Message: allowPrivilegeEscalation not set which allows privilege escalation. It should be set to 'false'.
+   Metadata:
+      Container: rabbitmq
+
+-- [warning] PrivilegedNil
+   Message: privileged is not set in container SecurityContext. Privileged defaults to 'false' but it should be explicitly set to 'false'.
+   Metadata:
+      Container: rabbitmq
+
+-- [error] ReadOnlyRootFilesystemNil
+   Message: readOnlyRootFilesystem is not set in container SecurityContext. It should be set to 'true'.
+   Metadata:
+      Container: rabbitmq
+
+-- [error] SeccompAnnotationMissing
+   Message: Seccomp annotation is missing. The annotation seccomp.security.alpha.kubernetes.io/pod: runtime/default should be added.
+   Metadata:
+      MissingAnnotation: seccomp.security.alpha.kubernetes.io/pod
+
+
+---------------- Results for ---------------
+
+  apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    name: ratings
+    namespace: wiz
+
+--------------------------------------------
+
+-- [error] AppArmorAnnotationMissing
+   Message: AppArmor annotation missing. The annotation 'container.apparmor.security.beta.kubernetes.io/ratings' should be added.
+   Metadata:
+      Container: ratings
+      MissingAnnotation: container.apparmor.security.beta.kubernetes.io/ratings
+
+-- [error] AutomountServiceAccountTokenTrueAndDefaultSA
+   Message: Default service account with token mounted. automountServiceAccountToken should be set to 'false' on either the ServiceAccount or on the PodSpec or a non-default service account should be used.
+
+-- [error] CapabilityOrSecurityContextMissing
+   Message: Security Context not set. The Security Context should be specified and all Capabilities should be dropped by setting the Drop list to ALL.
+   Metadata:
+      Container: ratings
+
+-- [error] RunAsNonRootPSCNilCSCNil
+   Message: runAsNonRoot should be set to true or runAsUser should be set to a value > 0 either in the container SecurityContext or PodSecurityContext.
+   Metadata:
+      Container: ratings
+
+-- [error] AllowPrivilegeEscalationNil
+   Message: allowPrivilegeEscalation not set which allows privilege escalation. It should be set to 'false'.
+   Metadata:
+      Container: ratings
+
+-- [warning] PrivilegedNil
+   Message: privileged is not set in container SecurityContext. Privileged defaults to 'false' but it should be explicitly set to 'false'.
+   Metadata:
+      Container: ratings
+
+-- [error] ReadOnlyRootFilesystemNil
+   Message: readOnlyRootFilesystem is not set in container SecurityContext. It should be set to 'true'.
+   Metadata:
+      Container: ratings
+
+-- [error] SeccompAnnotationMissing
+   Message: Seccomp annotation is missing. The annotation seccomp.security.alpha.kubernetes.io/pod: runtime/default should be added.
+   Metadata:
+      MissingAnnotation: seccomp.security.alpha.kubernetes.io/pod
+
+
+---------------- Results for ---------------
+
+  apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    name: shipping
+    namespace: wiz
+
+--------------------------------------------
+
+-- [error] AppArmorAnnotationMissing
+   Message: AppArmor annotation missing. The annotation 'container.apparmor.security.beta.kubernetes.io/shipping' should be added.
+   Metadata:
+      Container: shipping
+      MissingAnnotation: container.apparmor.security.beta.kubernetes.io/shipping
+
+-- [error] AutomountServiceAccountTokenTrueAndDefaultSA
+   Message: Default service account with token mounted. automountServiceAccountToken should be set to 'false' on either the ServiceAccount or on the PodSpec or a non-default service account should be used.
+
+-- [error] CapabilityOrSecurityContextMissing
+   Message: Security Context not set. The Security Context should be specified and all Capabilities should be dropped by setting the Drop list to ALL.
+   Metadata:
+      Container: shipping
+
+-- [error] RunAsNonRootPSCNilCSCNil
+   Message: runAsNonRoot should be set to true or runAsUser should be set to a value > 0 either in the container SecurityContext or PodSecurityContext.
+   Metadata:
+      Container: shipping
+
+-- [error] AllowPrivilegeEscalationNil
+   Message: allowPrivilegeEscalation not set which allows privilege escalation. It should be set to 'false'.
+   Metadata:
+      Container: shipping
+
+-- [warning] PrivilegedNil
+   Message: privileged is not set in container SecurityContext. Privileged defaults to 'false' but it should be explicitly set to 'false'.
+   Metadata:
+      Container: shipping
+
+-- [error] ReadOnlyRootFilesystemNil
+   Message: readOnlyRootFilesystem is not set in container SecurityContext. It should be set to 'true'.
+   Metadata:
+      Container: shipping
+
+-- [error] SeccompAnnotationMissing
+   Message: Seccomp annotation is missing. The annotation seccomp.security.alpha.kubernetes.io/pod: runtime/default should be added.
+   Metadata:
+      MissingAnnotation: seccomp.security.alpha.kubernetes.io/pod
+
+
+---------------- Results for ---------------
+
+  apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    name: user
+    namespace: wiz
+
+--------------------------------------------
+
+-- [error] AppArmorAnnotationMissing
+   Message: AppArmor annotation missing. The annotation 'container.apparmor.security.beta.kubernetes.io/user' should be added.
+   Metadata:
+      Container: user
+      MissingAnnotation: container.apparmor.security.beta.kubernetes.io/user
+
+-- [error] AutomountServiceAccountTokenTrueAndDefaultSA
+   Message: Default service account with token mounted. automountServiceAccountToken should be set to 'false' on either the ServiceAccount or on the PodSpec or a non-default service account should be used.
+
+-- [error] CapabilityOrSecurityContextMissing
+   Message: Security Context not set. The Security Context should be specified and all Capabilities should be dropped by setting the Drop list to ALL.
+   Metadata:
+      Container: user
+
+-- [error] RunAsNonRootPSCNilCSCNil
+   Message: runAsNonRoot should be set to true or runAsUser should be set to a value > 0 either in the container SecurityContext or PodSecurityContext.
+   Metadata:
+      Container: user
+
+-- [error] AllowPrivilegeEscalationNil
+   Message: allowPrivilegeEscalation not set which allows privilege escalation. It should be set to 'false'.
+   Metadata:
+      Container: user
+
+-- [warning] PrivilegedNil
+   Message: privileged is not set in container SecurityContext. Privileged defaults to 'false' but it should be explicitly set to 'false'.
+   Metadata:
+      Container: user
+
+-- [error] ReadOnlyRootFilesystemNil
+   Message: readOnlyRootFilesystem is not set in container SecurityContext. It should be set to 'true'.
+   Metadata:
+      Container: user
+
+-- [error] SeccompAnnotationMissing
+   Message: Seccomp annotation is missing. The annotation seccomp.security.alpha.kubernetes.io/pod: runtime/default should be added.
+   Metadata:
+      MissingAnnotation: seccomp.security.alpha.kubernetes.io/pod
+
+
+---------------- Results for ---------------
+
+  apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    name: web
+    namespace: wiz
+
+--------------------------------------------
+
+-- [error] AppArmorAnnotationMissing
+   Message: AppArmor annotation missing. The annotation 'container.apparmor.security.beta.kubernetes.io/web' should be added.
+   Metadata:
+      Container: web
+      MissingAnnotation: container.apparmor.security.beta.kubernetes.io/web
+
+-- [error] AutomountServiceAccountTokenTrueAndDefaultSA
+   Message: Default service account with token mounted. automountServiceAccountToken should be set to 'false' on either the ServiceAccount or on the PodSpec or a non-default service account should be used.
+
+-- [error] CapabilityOrSecurityContextMissing
+   Message: Security Context not set. The Security Context should be specified and all Capabilities should be dropped by setting the Drop list to ALL.
+   Metadata:
+      Container: web
+
+-- [error] RunAsNonRootPSCNilCSCNil
+   Message: runAsNonRoot should be set to true or runAsUser should be set to a value > 0 either in the container SecurityContext or PodSecurityContext.
+   Metadata:
+      Container: web
+
+-- [error] AllowPrivilegeEscalationNil
+   Message: allowPrivilegeEscalation not set which allows privilege escalation. It should be set to 'false'.
+   Metadata:
+      Container: web
+
+-- [warning] PrivilegedNil
+   Message: privileged is not set in container SecurityContext. Privileged defaults to 'false' but it should be explicitly set to 'false'.
+   Metadata:
+      Container: web
+
+-- [error] ReadOnlyRootFilesystemNil
+   Message: readOnlyRootFilesystem is not set in container SecurityContext. It should be set to 'true'.
+   Metadata:
+      Container: web
+
+-- [error] SeccompAnnotationMissing
+   Message: Seccomp annotation is missing. The annotation seccomp.security.alpha.kubernetes.io/pod: runtime/default should be added.
+   Metadata:
+      MissingAnnotation: seccomp.security.alpha.kubernetes.io/pod
+
+
+---------------- Results for ---------------
+
+  apiVersion: apps/v1
+  kind: StatefulSet
+  metadata:
+    name: redis
+    namespace: wiz
+
+--------------------------------------------
+
+-- [error] AppArmorAnnotationMissing
+   Message: AppArmor annotation missing. The annotation 'container.apparmor.security.beta.kubernetes.io/redis' should be added.
+   Metadata:
+      Container: redis
+      MissingAnnotation: container.apparmor.security.beta.kubernetes.io/redis
+
+-- [error] AutomountServiceAccountTokenTrueAndDefaultSA
+   Message: Default service account with token mounted. automountServiceAccountToken should be set to 'false' on either the ServiceAccount or on the PodSpec or a non-default service account should be used.
+
+-- [error] CapabilityOrSecurityContextMissing
+   Message: Security Context not set. The Security Context should be specified and all Capabilities should be dropped by setting the Drop list to ALL.
+   Metadata:
+      Container: redis
+
+-- [error] RunAsNonRootPSCNilCSCNil
+   Message: runAsNonRoot should be set to true or runAsUser should be set to a value > 0 either in the container SecurityContext or PodSecurityContext.
+   Metadata:
+      Container: redis
+
+-- [error] AllowPrivilegeEscalationNil
+   Message: allowPrivilegeEscalation not set which allows privilege escalation. It should be set to 'false'.
+   Metadata:
+      Container: redis
+
+-- [warning] PrivilegedNil
+   Message: privileged is not set in container SecurityContext. Privileged defaults to 'false' but it should be explicitly set to 'false'.
+   Metadata:
+      Container: redis
+
+-- [error] ReadOnlyRootFilesystemNil
+   Message: readOnlyRootFilesystem is not set in container SecurityContext. It should be set to 'true'.
+   Metadata:
+      Container: redis
+
+-- [error] SeccompAnnotationMissing
+   Message: Seccomp annotation is missing. The annotation seccomp.security.alpha.kubernetes.io/pod: runtime/default should be added.
+   Metadata:
+      MissingAnnotation: seccomp.security.alpha.kubernetes.io/pod
+
+
+---------------- Results for ---------------
+
+  apiVersion: v1
+  kind: Namespace
+  metadata:
+    name: wiz
+
+--------------------------------------------
+
+-- [error] MissingDefaultDenyIngressAndEgressNetworkPolicy
+   Message: Namespace is missing a default deny ingress and egress NetworkPolicy.
+   Metadata:
+      Namespace: wiz
+
+sauera@sauera-a02 Microservices-demo-app % 
