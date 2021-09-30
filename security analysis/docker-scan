@@ -1,0 +1,140 @@
+ docker scan asauer/web:1.1
+✗ High severity vulnerability found in systemd/libsystemd0
+  Description: Incorrect Privilege Assignment
+  Info: https://snyk.io/vuln/SNYK-DEBIAN10-SYSTEMD-345391
+  Introduced through: systemd/libsystemd0@241-7~deb10u8, util-linux/bsdutils@1:2.33.1-0.1, apt@1.8.2.3, util-linux/mount@2.33.1-0.1, systemd/libudev1@241-7~deb10u8
+  From: systemd/libsystemd0@241-7~deb10u8
+  From: util-linux/bsdutils@1:2.33.1-0.1 > systemd/libsystemd0@241-7~deb10u8
+  From: apt@1.8.2.3 > apt/libapt-pkg5.0@1.8.2.3 > systemd/libsystemd0@241-7~deb10u8
+  and 4 more...
+
+✗ High severity vulnerability found in nghttp2/libnghttp2-14
+  Description: Resource Exhaustion
+  Info: https://snyk.io/vuln/SNYK-DEBIAN10-NGHTTP2-1584531
+  Introduced through: curl@7.64.0-4+deb10u2
+  From: curl@7.64.0-4+deb10u2 > curl/libcurl4@7.64.0-4+deb10u2 > nghttp2/libnghttp2-14@1.36.0-2+deb10u1
+
+✗ High severity vulnerability found in libxml2
+  Description: Loop with Unreachable Exit Condition ('Infinite Loop')
+  Info: https://snyk.io/vuln/SNYK-DEBIAN10-LIBXML2-429486
+  Introduced through: nginx-module-xslt@1.20.1-1~buster
+  From: nginx-module-xslt@1.20.1-1~buster > libxml2@2.9.4+dfsg1-7+deb10u2
+  From: nginx-module-xslt@1.20.1-1~buster > libxslt/libxslt1.1@1.1.32-2.2~deb10u1 > libxml2@2.9.4+dfsg1-7+deb10u2
+
+✗ High severity vulnerability found in libssh2/libssh2-1
+  Description: Out-of-bounds Read
+  Info: https://snyk.io/vuln/SNYK-DEBIAN10-LIBSSH2-452460
+  Introduced through: curl@7.64.0-4+deb10u2
+  From: curl@7.64.0-4+deb10u2 > curl/libcurl4@7.64.0-4+deb10u2 > libssh2/libssh2-1@1.8.0-2.1
+
+✗ High severity vulnerability found in libidn2/libidn2-0
+  Description: Improper Input Validation
+  Info: https://snyk.io/vuln/SNYK-DEBIAN10-LIBIDN2-474100
+  Introduced through: curl@7.64.0-4+deb10u2
+  From: curl@7.64.0-4+deb10u2 > curl/libcurl4@7.64.0-4+deb10u2 > libidn2/libidn2-0@2.0.5-1+deb10u1
+  From: curl@7.64.0-4+deb10u2 > curl/libcurl4@7.64.0-4+deb10u2 > libpsl/libpsl5@0.20.2-2 > libidn2/libidn2-0@2.0.5-1+deb10u1
+  From: curl@7.64.0-4+deb10u2 > curl/libcurl4@7.64.0-4+deb10u2 > openldap/libldap-2.4-2@2.4.47+dfsg-3+deb10u6 > gnutls28/libgnutls30@3.6.7-4+deb10u7 > libidn2/libidn2-0@2.0.5-1+deb10u1
+
+✗ High severity vulnerability found in libgd2/libgd3
+  Description: Double Free
+  Info: https://snyk.io/vuln/SNYK-DEBIAN10-LIBGD2-1570131
+  Introduced through: nginx-module-image-filter@1.20.1-1~buster
+  From: nginx-module-image-filter@1.20.1-1~buster > libgd2/libgd3@2.2.5-5.2
+
+✗ High severity vulnerability found in libgd2/libgd3
+  Description: Out-of-bounds Read
+  Info: https://snyk.io/vuln/SNYK-DEBIAN10-LIBGD2-558917
+  Introduced through: nginx-module-image-filter@1.20.1-1~buster
+  From: nginx-module-image-filter@1.20.1-1~buster > libgd2/libgd3@2.2.5-5.2
+
+✗ High severity vulnerability found in icu/libicu63
+  Description: Double Free
+  Info: https://snyk.io/vuln/SNYK-DEBIAN10-ICU-1315155
+  Introduced through: nginx-module-xslt@1.20.1-1~buster
+  From: nginx-module-xslt@1.20.1-1~buster > libxml2@2.9.4+dfsg1-7+deb10u2 > icu/libicu63@63.1-6+deb10u1
+
+✗ High severity vulnerability found in glibc/libc-bin
+  Description: Reachable Assertion
+  Info: https://snyk.io/vuln/SNYK-DEBIAN10-GLIBC-1065768
+  Introduced through: glibc/libc-bin@2.28-10, meta-common-packages@meta
+  From: glibc/libc-bin@2.28-10
+  From: meta-common-packages@meta > glibc/libc6@2.28-10
+
+✗ High severity vulnerability found in glibc/libc-bin
+  Description: Out-of-bounds Write
+  Info: https://snyk.io/vuln/SNYK-DEBIAN10-GLIBC-559488
+  Introduced through: glibc/libc-bin@2.28-10, meta-common-packages@meta
+  From: glibc/libc-bin@2.28-10
+  From: meta-common-packages@meta > glibc/libc6@2.28-10
+
+✗ High severity vulnerability found in glibc/libc-bin
+  Description: Use After Free
+  Info: https://snyk.io/vuln/SNYK-DEBIAN10-GLIBC-559493
+  Introduced through: glibc/libc-bin@2.28-10, meta-common-packages@meta
+  From: glibc/libc-bin@2.28-10
+  From: meta-common-packages@meta > glibc/libc6@2.28-10
+
+✗ High severity vulnerability found in gcc-8/libstdc++6
+  Description: Information Exposure
+  Info: https://snyk.io/vuln/SNYK-DEBIAN10-GCC8-347558
+  Introduced through: apt@1.8.2.3, nginx-module-xslt@1.20.1-1~buster, meta-common-packages@meta
+  From: apt@1.8.2.3 > gcc-8/libstdc++6@8.3.0-6
+  From: apt@1.8.2.3 > apt/libapt-pkg5.0@1.8.2.3 > gcc-8/libstdc++6@8.3.0-6
+  From: nginx-module-xslt@1.20.1-1~buster > libxml2@2.9.4+dfsg1-7+deb10u2 > icu/libicu63@63.1-6+deb10u1 > gcc-8/libstdc++6@8.3.0-6
+  and 2 more...
+
+✗ High severity vulnerability found in gcc-8/libstdc++6
+  Description: Insufficient Entropy
+  Info: https://snyk.io/vuln/SNYK-DEBIAN10-GCC8-469413
+  Introduced through: apt@1.8.2.3, nginx-module-xslt@1.20.1-1~buster, meta-common-packages@meta
+  From: apt@1.8.2.3 > gcc-8/libstdc++6@8.3.0-6
+  From: apt@1.8.2.3 > apt/libapt-pkg5.0@1.8.2.3 > gcc-8/libstdc++6@8.3.0-6
+  From: nginx-module-xslt@1.20.1-1~buster > libxml2@2.9.4+dfsg1-7+deb10u2 > icu/libicu63@63.1-6+deb10u1 > gcc-8/libstdc++6@8.3.0-6
+  and 2 more...
+
+✗ Critical severity vulnerability found in glibc/libc-bin
+  Description: Use After Free
+  Info: https://snyk.io/vuln/SNYK-DEBIAN10-GLIBC-1296899
+  Introduced through: glibc/libc-bin@2.28-10, meta-common-packages@meta
+  From: glibc/libc-bin@2.28-10
+  From: meta-common-packages@meta > glibc/libc6@2.28-10
+
+✗ Critical severity vulnerability found in glibc/libc-bin
+  Description: Integer Overflow or Wraparound
+  Info: https://snyk.io/vuln/SNYK-DEBIAN10-GLIBC-1315333
+  Introduced through: glibc/libc-bin@2.28-10, meta-common-packages@meta
+  From: glibc/libc-bin@2.28-10
+  From: meta-common-packages@meta > glibc/libc6@2.28-10
+
+
+
+Package manager:   deb
+Project name:      docker-image|asauer/web
+Docker image:      asauer/web:1.1
+Platform:          linux/amd64
+Base image:        nginx:1.20.1
+
+Tested 136 dependencies for known vulnerabilities, found 111 vulnerabilities.
+
+According to our scan, you are currently using the most secure version of the selected base image
+
+For more free scans that keep your images secure, sign up to Snyk at https://dockr.ly/3ePqVcp
+
+sauera@sauera-a02 locust % 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
