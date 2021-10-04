@@ -27,7 +27,7 @@ To see the application performance results in the Instana dashboard, you will fi
 To download the tracing module for Nginx, it needs a valid Instana agent key. Set this in the environment before starting the build.
 
 ```shell
-git clone https://github.com/assafsauer/demo-TSM.git
+git clone https://github.com/assafsauer/Microservices-demo-app.git
 cd Microservices-demo-app/authsec
 python3 auth-main.py 
 git branch
