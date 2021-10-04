@@ -1,0 +1,14 @@
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: auth.4e559161-b6ae-4f8d-863e-8b4ccabdefd33308
+spec:
+  selector:
+    matchLabels:
+      app: 4e559161-b6ae-4f8d-863e-8b4ccabdefd3
+  action: ALLOW 
+  rules:
+  - to:
+    - operation:
+        methods: ["GET"]
+        paths: ["/api/cart/add/anonymous-53/UHJ/*"]

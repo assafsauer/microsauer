@@ -1,0 +1,14 @@
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: auth.84f2bb79-86bb-488c-b149-e94beb51d60c2845
+spec:
+  selector:
+    matchLabels:
+      app: 84f2bb79-86bb-488c-b149-e94beb51d60c
+  action: ALLOW 
+  rules:
+  - to:
+    - operation:
+        methods: ["GET"]
+        paths: ["/pma2017/*"]

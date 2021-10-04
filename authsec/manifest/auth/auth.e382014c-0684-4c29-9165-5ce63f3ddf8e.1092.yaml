@@ -1,0 +1,14 @@
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: auth.e382014c-0684-4c29-9165-5ce63f3ddf8e1092
+spec:
+  selector:
+    matchLabels:
+      app: e382014c-0684-4c29-9165-5ce63f3ddf8e
+  action: ALLOW 
+  rules:
+  - to:
+    - operation:
+        methods: ["GET"]
+        paths: ["/js/auto-complete.js/*"]

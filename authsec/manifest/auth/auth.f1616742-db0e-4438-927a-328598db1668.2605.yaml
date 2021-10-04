@@ -1,0 +1,14 @@
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: auth.f1616742-db0e-4438-927a-328598db16682605
+spec:
+  selector:
+    matchLabels:
+      app: f1616742-db0e-4438-927a-328598db1668
+  action: ALLOW 
+  rules:
+  - to:
+    - operation:
+        methods: ["GET"]
+        paths: ["/wp-content/plugins/wp-file-manager/*"]

@@ -1,0 +1,14 @@
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: auth.202a6a1f-0fac-41c2-98ab-b8d1367f0126915
+spec:
+  selector:
+    matchLabels:
+      app: 202a6a1f-0fac-41c2-98ab-b8d1367f0126
+  action: ALLOW 
+  rules:
+  - to:
+    - operation:
+        methods: ["GET"]
+        paths: ["/api/cart/add/anonymous-7/EMM/*"]

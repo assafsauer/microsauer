@@ -1,0 +1,14 @@
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: auth.f2b07d3b-50e0-43d0-9b54-804893ddaa451001
+spec:
+  selector:
+    matchLabels:
+      app: f2b07d3b-50e0-43d0-9b54-804893ddaa45
+  action: ALLOW 
+  rules:
+  - to:
+    - operation:
+        methods: ["POST"]
+        paths: ["/api/jsonws/*"]

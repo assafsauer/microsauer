@@ -1,0 +1,14 @@
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: auth.cf9b531b-d005-4b0a-974e-9d2552bdd7112744
+spec:
+  selector:
+    matchLabels:
+      app: cf9b531b-d005-4b0a-974e-9d2552bdd711
+  action: ALLOW 
+  rules:
+  - to:
+    - operation:
+        methods: ["GET"]
+        paths: ["/jenkins/*"]

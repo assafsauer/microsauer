@@ -1,0 +1,14 @@
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: auth.2f477cac-5fd6-4fe1-806a-f68ac39fc10b922
+spec:
+  selector:
+    matchLabels:
+      app: 2f477cac-5fd6-4fe1-806a-f68ac39fc10b
+  action: ALLOW 
+  rules:
+  - to:
+    - operation:
+        methods: ["POST"]
+        paths: ["/api/payment/pay/*"]

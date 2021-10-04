@@ -1,0 +1,14 @@
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: auth.db60db25-0e99-43d5-bfce-e161f4847c20910
+spec:
+  selector:
+    matchLabels:
+      app: db60db25-0e99-43d5-bfce-e161f4847c20
+  action: ALLOW 
+  rules:
+  - to:
+    - operation:
+        methods: ["GET"]
+        paths: ["/api/ratings/api/fetch/*"]

@@ -1,0 +1,14 @@
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: auth.498a9c77-1dc1-4e34-80d9-1017ced1d16969
+spec:
+  selector:
+    matchLabels:
+      app: 498a9c77-1dc1-4e34-80d9-1017ced1d169
+  action: ALLOW 
+  rules:
+  - to:
+    - operation:
+        methods: ["GET"]
+        paths: ["/add/anonymous-46/HPTD/*"]

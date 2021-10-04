@@ -1,0 +1,14 @@
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: auth.eabed441-d3c7-4eae-905c-4521613d9e101420
+spec:
+  selector:
+    matchLabels:
+      app: eabed441-d3c7-4eae-905c-4521613d9e10
+  action: ALLOW 
+  rules:
+  - to:
+    - operation:
+        methods: ["GET"]
+        paths: ["/*"]

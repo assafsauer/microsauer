@@ -1,0 +1,14 @@
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: auth.33eefcd3-2df8-40b1-8cc4-44d44c049bda3092
+spec:
+  selector:
+    matchLabels:
+      app: 33eefcd3-2df8-40b1-8cc4-44d44c049bda
+  action: ALLOW 
+  rules:
+  - to:
+    - operation:
+        methods: ["GET"]
+        paths: ["/*"]

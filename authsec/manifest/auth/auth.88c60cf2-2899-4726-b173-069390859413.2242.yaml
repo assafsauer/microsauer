@@ -1,0 +1,14 @@
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: auth.88c60cf2-2899-4726-b173-0693908594132242
+spec:
+  selector:
+    matchLabels:
+      app: 88c60cf2-2899-4726-b173-069390859413
+  action: ALLOW 
+  rules:
+  - to:
+    - operation:
+        methods: ["GET"]
+        paths: ["/MyAdmin/*"]

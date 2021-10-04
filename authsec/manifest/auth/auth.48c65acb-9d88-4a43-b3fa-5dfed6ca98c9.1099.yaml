@@ -1,0 +1,14 @@
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: auth.48c65acb-9d88-4a43-b3fa-5dfed6ca98c91099
+spec:
+  selector:
+    matchLabels:
+      app: 48c65acb-9d88-4a43-b3fa-5dfed6ca98c9
+  action: ALLOW 
+  rules:
+  - to:
+    - operation:
+        methods: ["GET"]
+        paths: ["/media/wiz.blue.jpeg/*"]

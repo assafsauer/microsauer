@@ -1,0 +1,14 @@
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: auth.ea2189e7-73e3-422f-bcff-dd49663a5cd71722
+spec:
+  selector:
+    matchLabels:
+      app: ea2189e7-73e3-422f-bcff-dd49663a5cd7
+  action: ALLOW 
+  rules:
+  - to:
+    - operation:
+        methods: ["GET"]
+        paths: ["/sitemap.xml/*"]

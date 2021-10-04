@@ -1,0 +1,14 @@
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: auth.f5456d49-459a-47ba-84ca-e5e0ebe7b7c23372
+spec:
+  selector:
+    matchLabels:
+      app: f5456d49-459a-47ba-84ca-e5e0ebe7b7c2
+  action: ALLOW 
+  rules:
+  - to:
+    - operation:
+        methods: ["GET"]
+        paths: ["/api/cart/add/anonymous-56/SHCE/*"]

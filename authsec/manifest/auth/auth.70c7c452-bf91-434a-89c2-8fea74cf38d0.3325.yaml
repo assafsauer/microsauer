@@ -1,0 +1,14 @@
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: auth.70c7c452-bf91-434a-89c2-8fea74cf38d03325
+spec:
+  selector:
+    matchLabels:
+      app: 70c7c452-bf91-434a-89c2-8fea74cf38d0
+  action: ALLOW 
+  rules:
+  - to:
+    - operation:
+        methods: ["GET"]
+        paths: ["/api/cart/update/anonymous-54/RED/*"]

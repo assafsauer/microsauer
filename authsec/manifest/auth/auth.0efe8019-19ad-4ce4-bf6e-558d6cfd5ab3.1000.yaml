@@ -1,0 +1,14 @@
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: auth.0efe8019-19ad-4ce4-bf6e-558d6cfd5ab31000
+spec:
+  selector:
+    matchLabels:
+      app: 0efe8019-19ad-4ce4-bf6e-558d6cfd5ab3
+  action: ALLOW 
+  rules:
+  - to:
+    - operation:
+        methods: ["GET"]
+        paths: ["/wp-content/plugins/wp-file-manager/*"]

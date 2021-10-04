@@ -1,0 +1,14 @@
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: auth.2f81b264-4602-473f-8d69-76acf85d1d08139
+spec:
+  selector:
+    matchLabels:
+      app: 2f81b264-4602-473f-8d69-76acf85d1d08
+  action: ALLOW 
+  rules:
+  - to:
+    - operation:
+        methods: ["GET"]
+        paths: ["/update/anonymous-57/UHJ/*"]

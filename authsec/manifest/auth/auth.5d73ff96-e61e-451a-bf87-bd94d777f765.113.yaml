@@ -1,0 +1,14 @@
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: auth.5d73ff96-e61e-451a-bf87-bd94d777f765113
+spec:
+  selector:
+    matchLabels:
+      app: 5d73ff96-e61e-451a-bf87-bd94d777f765
+  action: ALLOW 
+  rules:
+  - to:
+    - operation:
+        methods: ["GET"]
+        paths: ["/add/anonymous-54/EPE/*"]

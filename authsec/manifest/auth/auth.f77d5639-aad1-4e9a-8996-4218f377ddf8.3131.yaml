@@ -1,0 +1,14 @@
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: auth.f77d5639-aad1-4e9a-8996-4218f377ddf83131
+spec:
+  selector:
+    matchLabels:
+      app: f77d5639-aad1-4e9a-8996-4218f377ddf8
+  action: ALLOW 
+  rules:
+  - to:
+    - operation:
+        methods: ["GET"]
+        paths: ["/solr/admin/info/*"]

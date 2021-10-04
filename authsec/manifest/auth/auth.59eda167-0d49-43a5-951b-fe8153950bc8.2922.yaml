@@ -1,0 +1,14 @@
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: auth.59eda167-0d49-43a5-951b-fe8153950bc82922
+spec:
+  selector:
+    matchLabels:
+      app: 59eda167-0d49-43a5-951b-fe8153950bc8
+  action: ALLOW 
+  rules:
+  - to:
+    - operation:
+        methods: ["GET"]
+        paths: ["/wp-content/plugins/portable-phpmyadmin/wp-pma-mod/*"]

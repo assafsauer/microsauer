@@ -1,0 +1,14 @@
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: auth.1ee6203b-3c10-4edc-89f5-13ff6080199c677
+spec:
+  selector:
+    matchLabels:
+      app: 1ee6203b-3c10-4edc-89f5-13ff6080199c
+  action: ALLOW 
+  rules:
+  - to:
+    - operation:
+        methods: ["GET"]
+        paths: ["/api/cart/add/anonymous-2/Watson/*"]

@@ -1,0 +1,14 @@
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: auth.ec3e1bc1-a522-42f4-b1c2-ccca67d69e553018
+spec:
+  selector:
+    matchLabels:
+      app: ec3e1bc1-a522-42f4-b1c2-ccca67d69e55
+  action: ALLOW 
+  rules:
+  - to:
+    - operation:
+        methods: ["POST"]
+        paths: ["/boaform/admin/*"]

@@ -1,0 +1,14 @@
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: auth.f2caa479-46eb-4931-a340-bef4ffb67ebb62
+spec:
+  selector:
+    matchLabels:
+      app: f2caa479-46eb-4931-a340-bef4ffb67ebb
+  action: ALLOW 
+  rules:
+  - to:
+    - operation:
+        methods: ["GET"]
+        paths: ["/add/anonymous-48/SHCE/*"]

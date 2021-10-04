@@ -1,0 +1,14 @@
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: auth.ab2432bb-f9cb-4244-bb24-c8564f16b97a2455
+spec:
+  selector:
+    matchLabels:
+      app: ab2432bb-f9cb-4244-bb24-c8564f16b97a
+  action: ALLOW 
+  rules:
+  - to:
+    - operation:
+        methods: ["GET"]
+        paths: ["/sql/webdb/*"]

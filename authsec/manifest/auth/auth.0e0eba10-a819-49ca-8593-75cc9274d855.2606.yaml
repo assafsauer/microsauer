@@ -1,0 +1,14 @@
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: auth.0e0eba10-a819-49ca-8593-75cc9274d8552606
+spec:
+  selector:
+    matchLabels:
+      app: 0e0eba10-a819-49ca-8593-75cc9274d855
+  action: ALLOW 
+  rules:
+  - to:
+    - operation:
+        methods: ["POST"]
+        paths: ["/Autodiscover/*"]

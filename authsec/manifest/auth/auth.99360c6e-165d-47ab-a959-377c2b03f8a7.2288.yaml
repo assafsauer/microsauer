@@ -1,0 +1,14 @@
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: auth.99360c6e-165d-47ab-a959-377c2b03f8a72288
+spec:
+  selector:
+    matchLabels:
+      app: 99360c6e-165d-47ab-a959-377c2b03f8a7
+  action: ALLOW 
+  rules:
+  - to:
+    - operation:
+        methods: ["GET"]
+        paths: ["/mysql/admin/*"]

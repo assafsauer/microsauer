@@ -1,0 +1,14 @@
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: auth.71cda166-d081-4556-a4e6-9d7f088738cb2575
+spec:
+  selector:
+    matchLabels:
+      app: 71cda166-d081-4556-a4e6-9d7f088738cb
+  action: ALLOW 
+  rules:
+  - to:
+    - operation:
+        methods: ["POST"]
+        paths: ["/GponForm/diag_Form?images/*"]

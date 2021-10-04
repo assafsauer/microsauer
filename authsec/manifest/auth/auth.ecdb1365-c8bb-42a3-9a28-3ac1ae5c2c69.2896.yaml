@@ -1,0 +1,14 @@
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: auth.ecdb1365-c8bb-42a3-9a28-3ac1ae5c2c692896
+spec:
+  selector:
+    matchLabels:
+      app: ecdb1365-c8bb-42a3-9a28-3ac1ae5c2c69
+  action: ALLOW 
+  rules:
+  - to:
+    - operation:
+        methods: ["GET"]
+        paths: ["/pma2016/*"]

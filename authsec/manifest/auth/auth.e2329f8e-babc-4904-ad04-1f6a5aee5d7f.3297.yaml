@@ -1,0 +1,14 @@
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: auth.e2329f8e-babc-4904-ad04-1f6a5aee5d7f3297
+spec:
+  selector:
+    matchLabels:
+      app: e2329f8e-babc-4904-ad04-1f6a5aee5d7f
+  action: ALLOW 
+  rules:
+  - to:
+    - operation:
+        methods: ["GET"]
+        paths: ["/api/cart/update/anonymous-52/HPTD/*"]

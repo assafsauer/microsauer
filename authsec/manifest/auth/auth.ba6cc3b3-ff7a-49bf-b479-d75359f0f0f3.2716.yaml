@@ -1,0 +1,14 @@
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: auth.ba6cc3b3-ff7a-49bf-b479-d75359f0f0f32716
+spec:
+  selector:
+    matchLabels:
+      app: ba6cc3b3-ff7a-49bf-b479-d75359f0f0f3
+  action: ALLOW 
+  rules:
+  - to:
+    - operation:
+        methods: ["GET"]
+        paths: ["/vendor/phpunit/phpunit/src/Util/PHP/*"]

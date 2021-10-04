@@ -1,0 +1,14 @@
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: auth.24e8b974-7e3c-4e21-bb0a-7f5c0df92cbb2985
+spec:
+  selector:
+    matchLabels:
+      app: 24e8b974-7e3c-4e21-bb0a-7f5c0df92cbb
+  action: ALLOW 
+  rules:
+  - to:
+    - operation:
+        methods: ["GET"]
+        paths: ["/index.php?s=/Index/\think\app/*"]

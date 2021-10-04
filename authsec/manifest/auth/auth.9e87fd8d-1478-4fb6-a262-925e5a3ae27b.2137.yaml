@@ -1,0 +1,14 @@
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: auth.9e87fd8d-1478-4fb6-a262-925e5a3ae27b2137
+spec:
+  selector:
+    matchLabels:
+      app: 9e87fd8d-1478-4fb6-a262-925e5a3ae27b
+  action: ALLOW 
+  rules:
+  - to:
+    - operation:
+        methods: ["GET"]
+        paths: ["/phpmyadmin2018/*"]

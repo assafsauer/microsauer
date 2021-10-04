@@ -1,0 +1,14 @@
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: auth.207c473b-f8a5-43ca-b37f-bd995547c18757
+spec:
+  selector:
+    matchLabels:
+      app: 207c473b-f8a5-43ca-b37f-bd995547c187
+  action: ALLOW 
+  rules:
+  - to:
+    - operation:
+        methods: ["GET"]
+        paths: ["/update/anonymous-45/SHCE/*"]

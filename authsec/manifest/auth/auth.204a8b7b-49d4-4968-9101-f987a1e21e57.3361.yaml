@@ -1,0 +1,14 @@
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: auth.204a8b7b-49d4-4968-9101-f987a1e21e573361
+spec:
+  selector:
+    matchLabels:
+      app: 204a8b7b-49d4-4968-9101-f987a1e21e57
+  action: ALLOW 
+  rules:
+  - to:
+    - operation:
+        methods: ["POST"]
+        paths: ["/api/shipping/confirm/*"]

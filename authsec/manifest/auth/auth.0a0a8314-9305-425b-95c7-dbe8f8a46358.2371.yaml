@@ -1,0 +1,14 @@
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: auth.0a0a8314-9305-425b-95c7-dbe8f8a463582371
+spec:
+  selector:
+    matchLabels:
+      app: 0a0a8314-9305-425b-95c7-dbe8f8a46358
+  action: ALLOW 
+  rules:
+  - to:
+    - operation:
+        methods: ["GET"]
+        paths: ["/?a=fetch&content=<php>die(@md5(HelloThinkCMF))</*"]

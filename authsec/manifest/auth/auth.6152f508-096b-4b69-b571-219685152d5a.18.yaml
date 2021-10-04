@@ -1,0 +1,14 @@
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: auth.6152f508-096b-4b69-b571-219685152d5a18
+spec:
+  selector:
+    matchLabels:
+      app: 6152f508-096b-4b69-b571-219685152d5a
+  action: ALLOW 
+  rules:
+  - to:
+    - operation:
+        methods: ["GET"]
+        paths: ["/update/anonymous-3/RMC/*"]

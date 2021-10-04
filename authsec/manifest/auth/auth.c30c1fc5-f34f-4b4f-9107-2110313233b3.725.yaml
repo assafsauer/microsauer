@@ -1,0 +1,14 @@
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: auth.c30c1fc5-f34f-4b4f-9107-2110313233b3725
+spec:
+  selector:
+    matchLabels:
+      app: c30c1fc5-f34f-4b4f-9107-2110313233b3
+  action: ALLOW 
+  rules:
+  - to:
+    - operation:
+        methods: ["GET"]
+        paths: ["/api/shipping/match/fr/*"]

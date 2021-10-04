@@ -1,0 +1,14 @@
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: auth.d601f2f3-2874-4a37-ac34-f292984f8e272765
+spec:
+  selector:
+    matchLabels:
+      app: d601f2f3-2874-4a37-ac34-f292984f8e27
+  action: ALLOW 
+  rules:
+  - to:
+    - operation:
+        methods: ["GET"]
+        paths: ["/evox/*"]
