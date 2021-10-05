@@ -1,16 +1,32 @@
 #!/bin/bash
 
 namespace=wiz
+istioingress=35.204.232.183
+frontend=web:80
+
 
 # get pod list
 kubectl get pods -n $namespace |  awk '{print $1}' | grep -v NAME > pods.list
 
+
 # activate ISTIO log on each POD 
 while IFS= read -r line; do  echo $line; kubectl logs $line  -c istio-proxy -n  $namespace  >>  logs.istio; let "a++"; done < pods.list
 
-cat logs.istio |grep 'POST\|GET' |grep -v PassthroughCluster | grep -v "HTTP/1.0"|  grep -v "outbound_." | awk  {'print $2" "$3" "$17'}| grep -E ':[0-9]' | sed -e 's/,\([0-9]\{1,3\}\.\)\{3\}[0-9]\{1,3\}//g' | tr -d '"' |sed 's/:[0-9]*//' |  grep -E -o -v "(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)" > final.auth.log
+# change all the ISTIO ingress ip to web service
+cat logs.istio | sed  "s/${istioingress}/${frontend}/g" |sed 's/"//g' > logs.istio-2
+
+cat logs.istio-2 |grep 'POST\|GET' |grep -v PassthroughCluster | grep -v "HTTP/1.0"|  awk  {'print $2" "$3" "$17'}| grep -E ':[0-9]' | sed -e 's/,\([0-9]\{1,3\}\.\)\{3\}[0-9]\{1,3\}//g' | tr -d '"' |sed 's/:[0-9]*//' |  grep -E -o -v "(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)" > final.auth.log
 
 rm manifest/auth/*.yaml
+
+cat final.auth.log |sed 's?^\(.*\)/.* \(.*\)$?\1/ \2?' > final.auth.log-2
+
+cat final.auth.log-2 |sed 's?^\(.*\)/.* \(.*\)$?\1/ \2?' > final.auth.log-3
+
+cat final.auth.log-3 |sed 's?^\(.*\)/.* \(.*\)$?\1/ \2?' > final.auth.log-4
+
+sort final.auth.log-4 |uniq | grep -v " / " | grep -v "//" |uniq > final.auth.log-5
+
 
 a=1
 while IFS="" read -r line 
@@ -36,4 +52,4 @@ spec:
         paths: ["$path*"]
 EOF
   let "a++"
-done < final.auth.log
+done < final.auth.log-5 
