@@ -29,7 +29,8 @@ To download the tracing module for Nginx, it needs a valid Instana agent key. Se
 ```shell
 git clone https://github.com/assafsauer/Microservices-demo-app.git
 cd Microservices-demo-app/authsec
-python3 auth-main.py 
+chmod 777 auto.sec.sh
+./auto.sec.sh
 git branch
 git add manifest/auth/
 git commit -m "auth policies"
