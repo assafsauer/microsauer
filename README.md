@@ -23,7 +23,6 @@ To see the application performance results in the Instana dashboard, you will fi
 
 ## Automation Authorization
  
-
 To download the tracing module for Nginx, it needs a valid Instana agent key. Set this in the environment before starting the build.
 
 ```shell
