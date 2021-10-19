@@ -61,5 +61,3 @@ date: Tue, 21 Sep 2021 15:10:03 GMT
 server: istio-envoy
 x-envoy-upstream-service-time: 5
 ```
-
-Now build all the images.
