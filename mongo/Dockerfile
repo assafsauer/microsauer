@@ -4,4 +4,4 @@ COPY *.js /docker-entrypoint-initdb.d/
 
 COPY dd.js tmp/
 
-mongo tmp/dd.js
+RUN mongo tmp/dd.js
