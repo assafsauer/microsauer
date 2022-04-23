@@ -17,12 +17,10 @@ db.users.createIndex(
 
 use admin
 
-db.addUser("datadog", "<UNIQUEPASSWORD>", true)
-
 # On MongoDB 3.x or higher, use the createUser command.
 db.createUser({
   "user": "datadog",
-  "pwd": "<UNIQUEPASSWORD>",
+  "pwd": "secret",
   "roles": [
     { role: "read", db: "admin" },
     { role: "clusterMonitor", db: "admin" },
