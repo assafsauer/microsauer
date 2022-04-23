@@ -15,3 +15,17 @@ db.users.createIndex(
     {unique: true}
 );
 
+use admin
+
+db.addUser("datadog", "<UNIQUEPASSWORD>", true)
+
+# On MongoDB 3.x or higher, use the createUser command.
+db.createUser({
+  "user": "datadog",
+  "pwd": "<UNIQUEPASSWORD>",
+  "roles": [
+    { role: "read", db: "admin" },
+    { role: "clusterMonitor", db: "admin" },
+    { role: "read", db: "local" }
+  ]
+})
